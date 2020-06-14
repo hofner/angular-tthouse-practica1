@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component,Input} from '@angular/core';
+import {Entry} from '../shared/entry.model';
 
 @Component({
     selector: 'app-entry',
@@ -7,13 +8,5 @@ import {Component} from '@angular/core';
 
 })
 export class EntryComponent {
-    title: string='My First photo';
-    photo: string='http://placehold.it/800x500?text=Angular Basic';
-    description: string='A description of my first photo';
-    comments:any[]=[
-                    {name:"John",comment:"A comment"},
-                    {name:"Jim",comment:"A comment"},
-                    {name:"Jen",comment:"A comment"}
-
-                    ];
+    @Input() entry:Entry;
 }
